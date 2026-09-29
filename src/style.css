@@ -6,6 +6,9 @@
   --color-secondary: #ec4899;
   --color-secondary-glow: rgba(236, 72, 153, 0.25);
   --color-accent: #06b6d4;
+  --hover: #ffffff12;
+  /* table color */
+  --table-color: rgba(30, 30, 30, 0.605);
   /* Base & Layout Backgrounds */
   --color-bg-base: #060709;
   --color-bg-section: #0c0d14;
@@ -69,6 +72,7 @@ h4 {
 }
 
 p {
+  font-family: var(--font-display);
   font-size: 1rem;
   line-height: 1.7;
   color: var(--color-text-muted);
@@ -102,9 +106,13 @@ html {
   background-color: var(--color-bg-base);
 }
 
+a {
+  font-family: var(--font-display);
+}
+
 body {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
 }
 body header {
   padding: 1rem 0rem;
@@ -119,6 +127,7 @@ body header {
   gap: 1rem;
   border-bottom: 1px solid var(--color-border);
   backdrop-filter: blur(10px);
+  z-index: 100;
 }
 body header h2 {
   font-family: var(--font-display);
@@ -165,7 +174,7 @@ body main #hero {
   flex-direction: row;
   flex-wrap: wrap;
   flex-grow: 1;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 8rem 0;
   background-color: var(--color-bg-base);
 }
@@ -219,6 +228,7 @@ body main #hero .left-hero #cta a.btn2:hover {
   border-color: var(--white);
 }
 body main #hero .right-hero {
+  flex: 1 1 20rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -229,4 +239,199 @@ body main #hero .right-hero img {
   width: 70%;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
+}
+body main .sell-section {
+  text-transform: uppercase;
+  padding: 4rem 4.5rem;
+  background-color: var(--color-bg-section);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+body main .sell-section h2 {
+  font-size: 6rem;
+}
+body main .sell-section #items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+body main .sell-section #items article {
+  flex: 1 1 20rem;
+  position: relative;
+  padding: 0.6rem;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body main .sell-section #items article figure img {
+  border-radius: var(--radius-lg);
+  width: 100%;
+}
+body main .sell-section #items article figure figcaption {
+  color: var(--white);
+  padding: 0rem 1rem;
+  margin-top: 0.4rem;
+}
+body main .sell-section #items article h3 {
+  padding: 1rem 1rem;
+}
+body main .sell-section #items article p {
+  padding: 1rem 1rem;
+}
+body main .sell-section #items article mark {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  border-radius: var(--radius-lg);
+  padding: 0.3rem;
+  background: var(--gradient-accent);
+}
+body main .sell-section #items article button {
+  border-radius: var(--radius-sm);
+  border: none;
+  text-transform: uppercase;
+  padding: 0.8rem 0rem;
+}
+body main .sellingList {
+  background-color: var(--color-bg-base);
+  padding: 5rem 3.15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: scroll;
+  color: var(--white);
+}
+body main .sellingList h2 {
+  margin-bottom: 0.95rem;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+body main .sellingList table {
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+body main .sellingList table tr {
+  color: var(--white);
+  border: none;
+}
+body main .sellingList table tr th {
+  border: none;
+  padding: 0.9rem 1.3rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  background-color: var(--table-color);
+  color: var(--color-text-muted);
+  text-align: start;
+  border-top: var(--color-border);
+}
+body main .sellingList table tr th.heading {
+  background: var(--gradient-accent);
+  font-family: var(--font-display);
+}
+body main .sellingList table tr td {
+  border: none;
+  font-family: var(--font-display);
+  padding: 0.9rem 1.3rem;
+  background-color: var(--table-color);
+  font-family: var(--font-display);
+  color: var(--color-text-body);
+  border-top: 1px solid var(--color-border);
+}
+body main .sellingList table tr:hover {
+  background-color: rgba(255, 255, 255, 0.0705882353);
+}
+body main .sellingList::-webkit-scrollbar {
+  display: none;
+}
+body main .promises {
+  padding: 5rem 3.15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+body main .promises h2 {
+  text-transform: uppercase;
+  font-size: 4.8rem;
+}
+body main .promises ul {
+  margin: 3.15rem 0rem;
+  font-family: var(--font-display);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+body main .promises ul li {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  flex: 1 1 14rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: var(--color-text-body);
+  background-color: var(--color-surface);
+  padding: 1.5rem 1.5rem;
+  border-radius: var(--radius-md);
+  border-left: 0.25rem;
+}
+body main .promises ul li strong {
+  color: var(--white);
+  margin-bottom: 0.625rem;
+  text-align: start;
+  font-size: 1.2rem;
+}
+body main .promises hr {
+  width: 100%;
+  background-color: var(--color-text-body);
+  height: 0.1px;
+}
+body main .promises dl {
+  margin: 0.65rem;
+  padding: 1.9rem 0rem;
+  font-family: var(--font-display);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+body main .promises dl section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  flex: 1 1 14rem;
+}
+body main .promises dl section dt {
+  color: var(--color-accent);
+  margin-bottom: 0.65rem;
+  text-transform: uppercase;
+}
+body main .promises dl section dd {
+  font-size: 0.9rem;
+  color: var(--color-text-body);
+  font-family: var(--font-body);
+}
+body main .promises dl section:hover {
+  background-color: var(--hover);
+  border-color: var(--color-primary);
 }/*# sourceMappingURL=style.css.map */
