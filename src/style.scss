@@ -9,7 +9,7 @@
 	--color-accent: #06b6d4;
 
 	//hover color
-	--hover : #ffffff12;
+	--hover: #ffffff12;
 
 	/* table color */
 	--table-color: rgba(30, 30, 30, 0.605);
@@ -73,14 +73,16 @@ h4 {
 	font-weight: 600;
 }
 p {
+	letter-spacing: 0.1em;
 	font-family: var(--font-display);
 	font-size: 1rem;
 	line-height: 1.7;
 	color: var(--color-text-muted);
 }
 small {
-	font-size: 0.8rem;
+	font-size: 0.8rem; //12.8px
 	color: var(--color-text-muted);
+	font-family: var(--font-body);
 }
 strong {
 	color: var(--white);
@@ -127,7 +129,7 @@ body {
 			background: var(--gradient-accent);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
-			text-spacing: 0.8rem;
+			letter-spacing: 0.8rem;
 		}
 		nav {
 			display: flex;
@@ -433,12 +435,72 @@ body {
 						color: var(--color-text-body);
 						font-family: var(--font-body);
 					}
-					&:hover{
+					&:hover {
 						background-color: var(--hover);
 						border-color: var(--color-primary);
 					}
 				}
 			}
+		}
+		.mail {
+			padding: 7.5rem 1.93rem; //120px 30px
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			background-color: var(--color-surface);
+			h2 {
+				text-transform: uppercase;
+				padding: 0.95rem 0rem; //15px
+				font-size: 4.8rem; //76.8px
+			}
+			p {
+				font-family: var(--font-body);
+				align-items: center;
+				padding: 1.3rem 0rem; //20px
+				margin: 0rem 18.95rem; //303px
+				font-size: 1.1rem; //17.6rem
+			}
+			form {
+				display: flex;
+				justify-content: center;
+				border: 1px solid var(--color-border);
+				border-radius: var(--radius-sm);
+				overflow: hidden;
+				input {
+					padding: 0.9rem 1.93rem; //14px 30px
+					border: none;
+					background-color: #3232324e;
+					font-size: 1.2rem;
+					font-family: var(--font-body);
+					color: var(--white);
+				}
+				button {
+					background: var(--gradient-accent);
+					padding: 0.9rem 1.93rem; //14px 30px
+					border: none;
+					font-size: 1.2rem;
+					font-family: var(--font-display);
+					text-transform: uppercase;
+					color: var(--white);
+				}
+			}
+		}
+	}
+	footer {
+		padding: 5rem 3.125rem; //80px 50px
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		#top-para {
+			font-family: var(--font-display);
+			text-transform: uppercase;
+			background: var(--gradient-accent);
+			-webkit-background-clip: text;
+			background-clip: text;
+			font-size: 1.75rem;
+			font-weight: 700;
 		}
 	}
 }
