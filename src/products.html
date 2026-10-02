@@ -39,10 +39,9 @@
 			</section>
 
 			<section id="products-selling-section">
-				<section id="products-selling-section-left">
+				<section id="products-selling-section-sidebar">
 					<h2>Filter By</h2>
 					<h3>Category</h3>
-
 					<ul>
 						<li>
 							<input
@@ -85,9 +84,7 @@
 							<label for="cat-accessories">Accessories</label>
 						</li>
 					</ul>
-
 					<h3>Price Range (&#8377;)</h3>
-
 					<label for="price-min">Min:</label>
 					<input
 						type="number"
@@ -104,24 +101,21 @@
 						placeholder="5000"
 						min="0" />
 					<br /><br />
-
 					<h3>Sort By</h3>
-
 					<select id="sort" name="sort">
 						<option value="popular">Most Popular</option>
 						<option value="price-low">Price: Low to High</option>
 						<option value="price-high">Price: High to Low</option>
 						<option value="newest">Newest First</option>
 					</select>
-
 					<br /><br />
-
-					<button type="button">Apply Filters</button>
-					<button type="button">Clear All</button>
+					<button id="filter" type="button">Apply Filters</button>
+					<button id="clear" type="button">Clear All</button>
 				</section>
 				<section id="products-selling-section-right">
 					<h2>All Products</h2>
-					<article class="item">
+					<section class="items-container">
+						<article class="item">
 						<figure>
 							<img
 								src="Assets/images/product 1.jpg"
@@ -265,6 +259,7 @@
 						<a href="product.html">View Details</a>
 						<button type="button">Add to Cart</button>
 					</article>
+					</section>
 				</section>
 			</section>
 

@@ -229,9 +229,6 @@ body footer #link a {
 body footer #link a:hover {
   color: var(--color-secondary);
 }
-body footer {
-  display: none;
-}
 body main #hero {
   display: flex;
   flex-direction: row;
@@ -578,16 +575,24 @@ body main #products-selling-section {
   display: flex;
   flex-direction: row;
   overflow-y: scroll;
+  justify-content: space-between;
 }
 body main #products-selling-section::-webkit-scrollbar {
   display: none;
 }
-body main #products-selling-section #products-selling-section-left {
+body main #products-selling-section {
+  height: -moz-fit-content;
+  height: fit-content;
+  flex-wrap: wrap;
+}
+body main #products-selling-section #products-selling-section-sidebar {
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 1.3rem;
   border-radius: var(--radius-md);
   background-color: #171822;
 }
-body main #products-selling-section #products-selling-section-left h2 {
+body main #products-selling-section #products-selling-section-sidebar h2 {
   font-size: 0.8rem;
   padding-bottom: 0.65rem;
   color: var(--color-primary);
@@ -595,28 +600,91 @@ body main #products-selling-section #products-selling-section-left h2 {
   letter-spacing: 0.1rem;
   border-bottom: 1.5px solid var(--color-border);
 }
-body main #products-selling-section #products-selling-section-left h3 {
+body main #products-selling-section #products-selling-section-sidebar h3 {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 0.8rem;
-  padding: 1.93rem 0rem;
+  padding-top: 1.93rem;
+  padding-bottom: 1.3rem;
 }
-body main #products-selling-section #products-selling-section-left ul {
+body main #products-selling-section #products-selling-section-sidebar ul {
   list-style: none;
   color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
 }
-body main #products-selling-section #products-selling-section-left ul li input {
+body main #products-selling-section #products-selling-section-sidebar ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.4rem;
+}
+body main #products-selling-section #products-selling-section-sidebar ul li input {
   height: 1.125rem;
   width: 1.125rem;
 }
-body main #products-selling-section #products-selling-section-left ul li {
+body main #products-selling-section #products-selling-section-sidebar ul li {
   font-family: var(--font-body);
-  gap: 0.4rem;
 }
-body main #products-selling-section #products-selling-section-right .item {
+body main #products-selling-section #products-selling-section-sidebar ul li label:hover {
+  cursor: pointer;
+}
+body main #products-selling-section #products-selling-section-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+body main #products-selling-section #products-selling-section-sidebar input {
+  margin: 0.63rem 0rem;
+  padding: 0.5rem 0.63rem;
+  background-color: rgba(0, 0, 0, 0.9019607843);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-body);
+}
+body main #products-selling-section #products-selling-section-sidebar label {
+  color: var(--color-text-body);
+  font-family: var(--font-body);
+}
+body main #products-selling-section #products-selling-section-sidebar select {
+  background-color: rgba(0, 0, 0, 0.9019607843);
+  color: var(--color-text-body);
+  font-family: var(--font-display);
+}
+body main #products-selling-section #products-selling-section-sidebar select, body main #products-selling-section #products-selling-section-sidebar button {
+  margin: 0.63rem 0rem;
+  padding: 0.5rem 0.63rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+}
+body main #products-selling-section #products-selling-section-sidebar #clear {
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+body main #products-selling-section #products-selling-section-right h2 {
+  padding-bottom: 1.3rem;
+  text-transform: uppercase;
+}
+body main #products-selling-section #products-selling-section-right .items-container {
+  padding: 1.5rem;
+  overflow-y: scroll;
+}
+body main #products-selling-section #products-selling-section-right .items-container::-webkit-scrollbar {
+  display: none;
+}
+body main #products-selling-section #products-selling-section-right .items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1.3rem;
+}
+body main #products-selling-section #products-selling-section-right .items-container .item {
   flex: 1 1 20rem;
   position: relative;
-  padding: 0.6rem;
+  padding: 0.63rem;
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   display: flex;
@@ -624,30 +692,30 @@ body main #products-selling-section #products-selling-section-right .item {
   justify-content: space-between;
   transition: all 1.7s cubic-bezier(0.25, 1, 0.5, 1);
 }
-body main #products-selling-section #products-selling-section-right .item figure img {
+body main #products-selling-section #products-selling-section-right .items-container .item figure img {
   border-radius: var(--radius-lg);
   width: 100%;
   z-index: -10;
 }
-body main #products-selling-section #products-selling-section-right .item figure img:hover {
+body main #products-selling-section #products-selling-section-right .items-container .item figure img:hover {
   opacity: 1;
-  transform: translatez(8px) scale(1.01);
+  transform: translateZ(8px) scale(1.01);
 }
-body main #products-selling-section #products-selling-section-right .item figure figcaption {
+body main #products-selling-section #products-selling-section-right .items-container .item figure figcaption {
   color: var(--white);
   padding: 0rem 1rem;
   margin-top: 0.4rem;
 }
-body main #products-selling-section #products-selling-section-right .item figure {
+body main #products-selling-section #products-selling-section-right .items-container .item figure {
   overflow: hidden;
 }
-body main #products-selling-section #products-selling-section-right .item h3 {
+body main #products-selling-section #products-selling-section-right .items-container .item h3 {
   padding: 1rem 1rem;
 }
-body main #products-selling-section #products-selling-section-right .item p {
+body main #products-selling-section #products-selling-section-right .items-container .item p {
   padding: 1rem 1rem;
 }
-body main #products-selling-section #products-selling-section-right .item mark {
+body main #products-selling-section #products-selling-section-right .items-container .item mark {
   position: absolute;
   right: 1.5rem;
   top: 1.5rem;
@@ -655,13 +723,13 @@ body main #products-selling-section #products-selling-section-right .item mark {
   padding: 0.3rem;
   background: var(--gradient-accent);
 }
-body main #products-selling-section #products-selling-section-right .item button {
+body main #products-selling-section #products-selling-section-right .items-container .item button {
   border-radius: var(--radius-sm);
   border: none;
   text-transform: uppercase;
   padding: 0.8rem 0rem;
 }
-body main #products-selling-section #products-selling-section-right .item:hover {
+body main #products-selling-section #products-selling-section-right .items-container .item:hover {
   border-color: var(--color-primary);
   opacity: 1;
   transform: translatez(8px) scale(1.05);
